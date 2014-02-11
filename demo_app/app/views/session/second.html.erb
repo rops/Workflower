@@ -1,0 +1,22 @@
+<div class="row-fluid">
+    <div class="hero-unit">
+    	<h1> Login - Second Step </h1>
+		
+    	<%= form_tag '/session/login',class:'form-horizontal' do %>
+    	<div class="control-group">
+		  <%= label_tag(:question, "How you doing today?:",class:'control-label') %>
+    	  <div class="controls">
+		  <%= select_tag(:question, options_for_select([['Good',1],['Bad',0]])) %>
+		  </div>
+		  <div class="controls">
+		  	<br>
+		  <%= submit_tag("Login",class:'btn') %>
+		  </div>
+		</div>
+    	<% end %>     
+    </div>
+</div>
+
+
+
+

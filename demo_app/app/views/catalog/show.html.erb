@@ -1,0 +1,30 @@
+<div class="row-fluid">
+    <div class="span7">
+      <div class="well">
+		<h1>Our Catalog!</h1>
+		<ul>
+			<% @items.each do |i| %>
+				<li>
+					<%= i.name %><br>
+					<%= link_to '<button class="btn btn-mini btn-primary" type="button">Add to Cart</button>'.html_safe, add_to_cart_url(i.id) %>
+				</li>
+			<% end %>
+
+		</ul>
+</div>
+    </div>
+    <div class="span5 well">    	
+    	<h1>Your Cart</h1>
+      <%= render 'cart', cart:@cart %>
+    </div>
+    <div class="span5 well">    	
+    	<h1>Debug</h1>
+      <%= debug session %>
+    </div>
+  </div>
+  
+  
+
+
+
+

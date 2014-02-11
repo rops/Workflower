@@ -1,0 +1,17 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Workflows Demo", '/', id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <% if @user %>
+          <li><a>Hello, <%= @user.username %></a></li>
+          <li><%= link_to "Logout", '/logout' %></li>
+          <% else %>
+          <li><%= link_to "Login", '/login' %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+<% if cart.empty? %>
+	<h2> Your Cart is Empty </h2>
+<% else %>
+	<ul>
+	<% cart.each do |i| %>
+		<li> <%= i.item.name %> </li>
+	<% end %>
+	</ul>
+	<%= link_to '<button class="btn btn-mini btn-success" type="button">Checkout</button>'.html_safe, '/checkout' %>
+	<%= link_to '<button class="btn btn-mini btn-danger" type="button">Empty Cart</button>'.html_safe, destroy_cart_url %>
+<% end %>

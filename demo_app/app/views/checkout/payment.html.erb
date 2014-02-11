@@ -1,0 +1,20 @@
+<div class="row-fluid">
+    <div class="hero-unit">
+    	<h1> Checkout - First Step </h1>
+    	<h2> Payment Informations </h2>
+		
+    	<%= form_tag '/checkout/shipment',class:'form-horizontal' do %>
+    	<div class="control-group">
+    	  <%= label_tag(:card_number, "Card Number:",class:'control-label') %>
+    	  <div class="controls">
+		  <%= text_field_tag(:card_number) %>
+		  <%= submit_tag("Next Step",class:'btn') %>
+		  </div>
+		</div>
+    	<% end %>     
+    </div>
+</div>
+
+
+
+
