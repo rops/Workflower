@@ -1,0 +1,15 @@
+require 'rubygems'
+require 'rake'
+require 'echoe'
+
+
+Echoe.new('workflow', '0.1.0') do |p|
+  p.description    = "Workflows."
+  p.url            = "http://github.com/rops"
+  p.author         = "Daniele Rossetti"
+  p.email          = "daniele.rossetti@me.com"
+  p.ignore_pattern = ["tmp/*", "script/*"]
+  p.development_dependencies = ['rails3_before_render']
+end
+
+Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
