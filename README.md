@@ -28,4 +28,4 @@ workflow :workflow_name, singleton:true|false do |w|
 end
 ```
 
-For more details, read my 100pages dissertation :)
+For more details, please read my 100pages dissertation :)
