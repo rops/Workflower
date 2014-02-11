@@ -20,7 +20,7 @@ end
 
 More generally,
 ``` ruby
-workflow :checkout, singleton:true|false do |w|
+workflow :workflow_name, singleton:true|false do |w|
     ...
 		create_state w, conditions: boolean,
 			 controller: :controller_name, action: :action_name, redirect_to: '/checkout'
